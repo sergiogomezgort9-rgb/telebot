@@ -23,7 +23,11 @@ Cómo crear un de telegram
 <section>
   <h2>🛠️ Instalación en Termux</h2>
   <pre><code>pkg update && pkg upgrade
-pkg install nodejs git</code></pre>
+pkg install nodejs git</code></pre>  
+</section>
+ <h2>🧠 Clona el repo (bot telegram)</h2>
+  <pre><code>git clone https://github.com/sergiogomezgort9-rgb/Repositorios-de-telegram
+    cd Repositorio-de-telegram/</code></pre>
 </section>
 <pre><code>
 node -v
@@ -33,9 +37,6 @@ node -v
 npm -v
   </code></pre>
 </section>
-<pre><code>
-mkdir telegram-bot
-cd telegram-bot
   </code></pre>
 </section>
 <pre><code>
@@ -43,66 +44,9 @@ npm init -y
   </code></pre>
 </section>
 <pre><code>
-npm install node-telegram-bot-api
-nano index.js</code></pre>
+npm install node-telegram-bot-api</code></pre>
 </section>
-
-<section>
-  <h2>🧠 Código del Bot (index.js)</h2>
-  <pre><code>const TelegramBot = require("node-telegram-bot-api");
-
-const TOKEN = "AQUI_VA_TU_TOKEN";
-const bot = new TelegramBot(TOKEN, { polling: true });
-
-console.log("🤖 Sergio Bot encendido y listo");
-
-bot.on("message", (msg) => {
-  const chatId = msg.chat.id;
-  const text = msg.text;
-  const pushName = msg.from.first_name || "Usuario";
-
-  if (!text) return;
-
-  if (text === "/menu") {
-    const imageUrl = "https://i.imgur.com/tuImagen.jpg";
-    const caption = `
-♣*𝑺𝒆𝒓𝒈𝒊𝒐 𝑩𝒐𝒕*🌉
-╭─────────────────╮
-┊ Usuario: *${pushName}*
-┊ /start
-┊ /ping
-┊ /menu
-┊ /info
-┊ /hola
-╰─────────────────╯
-    `;
-    bot.sendPhoto(chatId, imageUrl, { caption, parse_mode: "Markdown" });
-    return;
-  }
-
-  if (text === "/start") {
-    bot.sendMessage(chatId, `Hola 👋 ${pushName}, escribe /menu`);
-    return;
-  }
-
-  if (text === "/ping") {
-    bot.sendMessage(chatId, "pong 🏓");
-    return;
-  }
-
-  if (text === "/info") {
-    bot.sendMessage(chatId, "🤖 Sergio Bot v1.0");
-    return;
-  }
-
-  if (text === "/hola") {
-    bot.sendMessage(chatId, "Hola 😎");
-    return;
-  }
-
-  bot.sendMessage(chatId, "❌ Comando no reconocido. Usa /menu");
-});</code></pre>
-</section>
+ 
 
 <section>
   <h2>▶️ Ejecutar el Bot</h2>
