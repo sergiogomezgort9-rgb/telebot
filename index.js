@@ -17,14 +17,14 @@ if (!text) return;
 
 if (text === "/menu") {
 const imageUrl = "https://i.imgur.com/tuImagen.jpg";
-const caption = ♣*𝑺𝒆𝒓𝒈𝒊𝒐 𝑩𝒐𝒕*🌉 ╭─────────────────╮ ┊ Usuario: *${pushName}* ┊ /start ┊ /ping ┊ /menu ┊ /info ┊ /hola ╰─────────────────╯;
+const caption = `♣*𝑺𝒆𝒓𝒈𝒊𝒐 𝑩𝒐𝒕*🌉 ╭─────────────────╮ ┊ Usuario: *${pushName}* ┊ /start ┊ /ping ┊ /menu ┊ /info ┊ /hola ╰─────────────────╯`;
 bot.sendPhoto(chatId, imageUrl, { caption, parse_mode: "Markdown" });
 return;
 }
 
 
 if (text === "/start") {
-bot.sendMessage(chatId, Hola 👋 ${pushName}, escribe /menu);
+bot.sendMessage(chatId, `Hola 👋 ${pushName}, escribe /menu`);
 return;
 }
 
