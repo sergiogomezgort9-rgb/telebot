@@ -26,8 +26,8 @@ Cómo crear un de telegram
 pkg install nodejs git</code></pre>  
 </section>
  <h2>🧠 Clona el repo (bot telegram)</h2>
-  <pre><code>git clone https://github.com/sergiogomezgort9-rgb/Repositorios-de-telegram
-    cd Repositorio-de-telegram/</code></pre>
+  <pre><code>git clone https://github.com/sergiogomezgort9-rgb/telebot
+    cd telebot/</code></pre>
 </section>
 <pre><code>
 node -v
